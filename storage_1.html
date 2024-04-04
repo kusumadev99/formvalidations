@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+ .md{
+            height:250px;
+            width:250px;
+            border:1px solid black;
+            margin-left: 400px;
+            position: relative;
+            top:50px;
+            border:none;
+            background:linear-gradient(blue,deeppink);
+        }
+        .in{
+            position: relative;
+            left:20px;
+            top:30px;
+            background-color:aliceblue;
+            color:green;
+
+        }
+        .in1{
+            position: relative;
+            left:20px;
+            top:40px;
+            background-color:aliceblue;
+          
+
+        }
+       
+        .in3{
+            position: relative;
+            left:20px;
+            top:60px;
+            background-color:aliceblue;
+            color:green;
+        }
+
+        .in4{
+            position: relative;
+            right:100px;
+            top:100px;
+            background-color:yellow;
+        }
+        p{
+            margin-top: 90px;
+            margin-left: 400px;
+            text-decoration: none;
+        }
+
+</style>
+</head>
+<body>
+    <form>
+       
+        <div class="md">
+        <input class="in" type="text" placeholder="enter username"/>
+        
+        <input class="in3" type="password" placeholder="enter password"/>
+        <button class="in4">login</button>
+       
+        </div>
+        <p>create your account here><a style="text-decoration: none;" href="storage1.html">signin</a></p>
+        </form>
+
+
+
+
+
+
+
+
+
+    <script>
+           
+        let obj={
+            u1:"kus",u2:"kusu",u3:"ramya"
+        }
+        let obj2={
+            u1:"kus",u2:"11",u3:"ram"
+        }
+        let getform=document.getElementsByTagName('form');
+        
+        console.log(getform[0][0].value);
+        getform[0].addEventListener("submit",(e)=>{
+            e.preventDefault();
+            console.log(getform[0][0].value);
+            console.log(getform[0][1].value);
+         
+            if(getform[0][0].value==0 &&getform[0][1].value==0){
+alert("you must enter the username and password")
+            }
+            else{
+                let login=false;
+                for(let i in obj){
+                
+                if(obj[i]==getform[0][0].value && obj2[i]==getform[0][1].value ){
+                    login=true;
+                    alert("successfully logined")
+                    break;
+                }
+ 
+          
+     else{
+login=false;
+alert("password incorrect")
+            }
+                }
+            }
+        })
+            
+        </script>  
+            
+            
+
+   
+</body>
+</html>
